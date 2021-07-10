@@ -1,1 +1,1 @@
-web:npm run server-setup 
+web: npm run server-setup 
