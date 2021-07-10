@@ -135,6 +135,10 @@ io.on("connect", (socket) => {
   });
 });
 
+app.get("/", (req, res) => {
+  res.send("The Youtube Sync Server by Gokul J Kurup")
+})
+
 app.use("/api", router);
 
 app.use((req, res, next) => {
