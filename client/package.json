@@ -25,15 +25,12 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "rm -rf ~/node_modules ~/package-lock.json && npm install && react-scripts build",
+    "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": "react-app"
-  },
-  "resolutions": {
-    "babel-jest": "24.7.1"
   },
   "browserslist": {
     "production": [
