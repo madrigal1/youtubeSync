@@ -135,7 +135,7 @@ const Screen = () => {
       if (!admin) {
         handlePlay(playing);
         setDuration(duration);
-        player.seekTo(duration, 'seconds');
+        //  player.seekTo(duration, 'seconds');
       } else {
         console.log('reached');
       }
@@ -198,7 +198,7 @@ const Screen = () => {
   }, [duration, playing]);
 
   useEffect(() => {
-    if (urls.length === 0) { return; }
+    if (!urls?.length) { return; }
     const upvotes = [];
     urls.forEach((ele) => upvotes.push(ele.upvotes));
     const max = Math.max.apply(null, upvotes);
@@ -234,17 +234,17 @@ const Screen = () => {
 
   const play = () => {
     console.log('onPlay');
-    console.log(player);
-    const timestamp = player.getCurrentTime();
-    setDuration(timestamp);
+    // console.log(player);
+    // const timestamp = player.getCurrentTime();
+    // setDuration(timestamp);
     handlePlay(true);
   };
 
   const pause = () => {
     console.log('onPause');
     console.log(player);
-    const timestamp = player.getCurrentTime();
-    setDuration(timestamp.toString());
+    // const timestamp = player.getCurrentTime();
+    //setDuration(timestamp.toString());
     handlePlay(false);
   };
   const ref = (pl) => {
@@ -289,7 +289,7 @@ const Screen = () => {
             message={message}
             messages={messages}
           />
-        ) }
+        )}
     </>
   );
 };

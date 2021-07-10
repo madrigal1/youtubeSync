@@ -127,10 +127,15 @@ const onSubmit = (text, loadingStatus, e) => {
     headers: { 'Content-Type': 'application/json' },
   }).then((response) => {
     if (response.status !== 200) {
-      alert('ERROR ');
+      let msg = text === 'createRoom' ? 'Unable to create room' : 'Unable to join room';
+      msg += "\nTry again !"
+      alert(msg);
+      console.log(response);
+      loadingStatus(false);
       return null;
+    } else {
+      return setTimeout(() => window.location.href = '/screen', 2500);
     }
-    return setTimeout(() => window.location.href = '/screen', 2500);
   });
 };
 
