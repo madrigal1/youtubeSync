@@ -21,8 +21,9 @@
   },
   "scripts": {
     "client": "npm run start --prefix client",
-    "client-build":"npm run build --prefix client",
+    "client-build": "npm run build --prefix client",
     "server": "npm run server --prefix server",
+    "server-setup": "npm install --prefix server && npm run server",
     "start": "concurrently --kill-others-on-fail \"npm run client\" \"npm run server\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
