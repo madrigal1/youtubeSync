@@ -80,7 +80,10 @@ const Screen = () => {
   const [toast, showToast] = useState(false);
   const [toastName, setToastName] = useState('');
   const [toastUrl, setToastUrl] = useState('');
-  const [toastMsg, setToastMsg] = useState('');
+  const [toastMsg, setToastMsg] = useState({
+    name: "default_name",
+    selUrl: "default_link"
+  });
   const [toastHits, settoastHits] = useState(0);
   const [nou, setnou] = useState(0);
   const [roomDisplay, changeRD] = useState(false);
@@ -150,7 +153,10 @@ const Screen = () => {
       showToast(true);
       setToastName(name);
       setToastUrl(selUrl);
-      setToastMsg(`${name} has selected \n ${selUrl}`);
+      setToastMsg({
+        name,
+        selUrl
+      });
     });
     socket.on('roomDisplay', (roomDisplay) => {
       console.log('ROOM DISPLAY ACTIVATE', roomDisplay);

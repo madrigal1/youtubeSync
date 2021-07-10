@@ -41,8 +41,9 @@ function Toast({
       </div>
       <div className="toastContent">
         <span>
-          {toastMsg}
-          { tdisplay ? <Admin setRD={setRD} /> : <NonAdmin /> }
+          <p>{toastMsg.name} chose the video: <br /> {toastMsg.selUrl}</p>
+          <br />
+          {tdisplay ? <Admin setRD={setRD} /> : <NonAdmin />}
         </span>
       </div>
     </div>

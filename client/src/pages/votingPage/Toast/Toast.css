@@ -6,7 +6,6 @@
     left:0;
     background-color: #333;
     font-size:1rem;
-    width:28vw ;
     height: 15vh;
     z-index:100000;
     box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
@@ -34,6 +33,7 @@
     padding: 1rem 1.5rem;
     color:white;
     text-align:center;
+    white-space: nowrap;
 }
 @keyframes showHideDot {
     0% { opacity: 0; }
