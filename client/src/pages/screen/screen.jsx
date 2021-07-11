@@ -167,7 +167,7 @@ const Screen = () => {
       settoastHits(toastHits);
     });
     return () => {
-      socket.emit('disconnect');
+      socket.disconnect();
       socket.off();
     };
   });
